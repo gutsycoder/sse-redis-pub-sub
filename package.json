@@ -1,0 +1,25 @@
+{
+  "name": "sse-redis-pub-sub",
+  "version": "1.0.0",
+  "description": "This is the implementation of SSE using Redis Pub Sub System ",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gutsycoder/sse-redis-pub-sub.git"
+  },
+  "author": "Suyash Saxena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gutsycoder/sse-redis-pub-sub/issues"
+  },
+  "homepage": "https://github.com/gutsycoder/sse-redis-pub-sub#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3",
+    "redis": "^4.6.14"
+  }
+}
