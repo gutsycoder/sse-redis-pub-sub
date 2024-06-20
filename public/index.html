@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Events</title>
+</head>
+<body>
+    <h1>Real-time Events</h1>
+    <div id="events"></div>
+    <script>
+        const eventsDiv = document.getElementById('events');
+        const eventsSource = new EventSource('/events');
+
+        eventsSource.onmessage = function(event){
+            const newEvent = document.createElement('p');
+            newEvent.textContent= event.data;
+            eventsDiv.appendChild(newEvent);
+        };
+
+        eventsSource.onerror = function(error){
+            console.error('EventSource failed:',error);
+            eventsSource.close();
+        }
+
+
+    </script> 
+    
+</body>
+</html>
